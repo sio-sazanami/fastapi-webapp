@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Toolkit-Chan</title>
+    <link rel="icon" href="/static/favicon.ico" id="favicon">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="/static/js/app.js"></script>
+</head>
+
+<body>
+    <div id="header-space" style="display: flex;">
+        <h1>お役立ちツールちゃん</h1>
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgkPxbOoRTpFSxJe4b5aCh37JO43ITEk9z8VzSsDWPBG0zPom2cV-3kWUmSl1aMup29Klp5AX13RvgRTME7ORdKob6bO1TLiWbadR0pSinkgMIp2lGR0GQ6V94Xm3gOkwM2e89qBjNincE/s800/majo_girl_majokko.png" height="60px">
+    </div>
+    <div id="content-space" style="display: flex;">
+        <div style="min-width: 200px;">
+            <details id="detail-search">
+                <summary>各種検索メニュー</summary>
+                <a href="/template" class="sidemenu-link">SQL</a><br>
+                <a href="/geosearch" class="sidemenu-link">geocoding-api検索</a><br>
+                <a href="/exe_api" class="sidemenu-link">任意API実行</a><br>
+            </details>
+            <details id="detail-dashb">
+                <summary>ダッシュボード</summary>
+                <a href="/earthquake" class="sidemenu-link">地震</a><br>
+                <a href="/bousai" class="sidemenu-link">防災</a><br>
+            </details>
+            <details id="detail-entry">
+                <summary>エントリ関連</summary>
+                <a href="/memo" class="sidemenu-link">メモ</a><br>
+            </details>
+            </ul>
+        </div>
+        <div style="padding-left: 10px;">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+</body>
+
+</html>

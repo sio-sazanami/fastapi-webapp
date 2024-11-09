@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+<script src="/static/js/grid.js"></script>
+
+<!-- jquery, jquery-ui, jqgrid -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.15.5/jquery.jqgrid.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/themes/redmond/jquery-ui.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.15.5/css/ui.jqgrid.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.15.5/plugins/css/ui.multiselect.min.css"/>
+<!---->
+<div style="display:flex;">
+    <h2>geocoding-api検索</h2>
+    <h2>geocoding APIの内容を確認します</h2>
+</div>
+
+<div style="display: flex;">
+    <div>
+        <table class="search_table" style="margin-right: 10px;">
+            <thead>
+                <th>COLUMN</th>
+                <th>PARAMETER</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ID</td>
+                    <td><input type="text" class="keyword" id="geo_id"></td>
+                </tr>
+                <tr>
+                    <td>CITY-NAME</td>
+                    <td><input type="text" class="keyword" id="geo_name"></td>
+                </tr>
+                <tr>
+                    <td>STATE</td>
+                    <td><input type="text" class="keyword" id="geo_state"></td>
+                </tr>
+                <tr>
+                    <td>COUNTRY</td>
+                    <td><input type="text" class="keyword" id="geo_country"></td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="button_area" style="display: flex;">
+            <button class="keyword-submit" onclick="geosearch()" id="submit-button">SEARCH</button>
+        </div>
+    </div>
+    <div id="grid_space"></div>
+    <div id="gbox_my-grid"></div>
+</div>
+
+{% endblock %}

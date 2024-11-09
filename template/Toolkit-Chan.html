@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://127.0.0.1:8080/exe_api -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Toolkit-Chan</title>
+    <link rel="stylesheet" href="./Toolkit-Chan_files/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./Toolkit-Chan_files/css2" rel="stylesheet">
+    <script src="./Toolkit-Chan_files/app.js"></script>
+</head>
+
+<body>
+    <div id="header-space" style="display: flex;">
+        <h1>お役立ちツールちゃん</h1>
+        <img src="./Toolkit-Chan_files/majo_girl_majokko.png" height="60px">
+    </div>
+    <div id="content-space" style="display: flex;">
+        <div style="min-width: 200px;">
+            <details id="detail-search" open="">
+                <summary>各種検索メニュー</summary>
+                <a href="http://127.0.0.1:8080/template" class="sidemenu-link">テンプレート</a><br>
+                <a href="http://127.0.0.1:8080/geosearch" class="sidemenu-link">geocoding-api検索</a><br>
+                <a href="http://127.0.0.1:8080/exe_api" class="sidemenu-link">任意API実行</a><br>
+            </details>
+            <details id="detail-dashb">
+                <summary>ダッシュボード</summary>
+                <a href="http://127.0.0.1:8080/earthquake" class="sidemenu-link">地震</a><br>
+                <a href="http://127.0.0.1:8080/bousai" class="sidemenu-link">防災</a><br>
+            </details>
+            <details id="detail-entry">
+                <summary>エントリ関連</summary>
+                <a href="http://127.0.0.1:8080/memo" class="sidemenu-link">メモ</a><br>
+            </details>
+            
+        </div>
+        <div style="padding-left: 10px;">
+            
+<script src="./Toolkit-Chan_files/grid.js"></script>
+
+<!-- jquery, jquery-ui, jqgrid -->
+<script src="./Toolkit-Chan_files/jquery.min.js"></script>
+<script src="./Toolkit-Chan_files/jquery.jqgrid.min.js"></script>
+<link rel="stylesheet" href="./Toolkit-Chan_files/jquery-ui.min.css">
+<link rel="stylesheet" href="./Toolkit-Chan_files/ui.jqgrid.min.css">
+<link rel="stylesheet" href="./Toolkit-Chan_files/ui.multiselect.min.css">
+<!---->
+<div style="display:flex;">
+    <h2>任意API実行</h2>
+    <h2>URLを指定し任意のPOSTリクエストを送信します</h2>
+</div>
+
+<div style="display: flex;">
+    <div>
+        <table class="search_table" style="margin-right: 10px;">
+            <thead>
+                <tr><th>COLUMN</th>
+                <th>PARAMETER</th>
+            </tr></thead>
+            <tbody>
+                <tr>
+                    <td>URL</td>
+                    <td><input type="text" class="keyword" id="url"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="text" class="keyword" id="geo_name"></td>
+                </tr>
+                <tr>
+                    <td>STATE</td>
+                    <td><input type="text" class="keyword" id="geo_state"></td>
+                </tr>
+                <tr>
+                    <td>COUNTRY</td>
+                    <td><input type="text" class="keyword" id="geo_country"></td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="button_area" style="display: flex;">
+            <button class="keyword-submit" onclick="exe_api()" id="submit-button">SEARCH</button>
+        </div>
+    </div>
+    <div id="grid_space"></div>
+    <div id="gbox_my-grid"></div>
+</div>
+
+
+        </div>
+    </div>
+
+
+</body></html>
